@@ -34,6 +34,8 @@ router.post('/', (req, res) => {
             date : req.body.date,
             secteur : req.body.secteur,
             contact : req.body.contact,
+            accompte : req.body.accompte,
+            reste : req.body.reste,
             mail : req.body.mail,
             phone : req.body.phone,
             details : req.body.details,
