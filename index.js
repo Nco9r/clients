@@ -6,9 +6,9 @@ const postsRoutesClients = require('./routes/postsControllerClients');
 const postsRoutesProspects = require('./routes/postControllersProspects');
 const cors = require('cors')
 const port = process.env.PORT || 8080
-
 const mongoose = require('mongoose')
-mongoose.set('useFindAndModify', false)
+
+mongoose.set('useFindAndModify', false);
 app.use(bodyParser.json());
 app.use(cors());
 

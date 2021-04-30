@@ -67,7 +67,7 @@ router.put('/:id', (req, res) => {
     PostsModels.findByIdAndUpdate(
         req.params.id,
         { $set: updateRecord},
-        { new: true },
+        { new: false },
         (err, docs) => {
             if (!err) res.send(docs);
             else console.log('update erreur' + err)
