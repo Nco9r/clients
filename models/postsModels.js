@@ -5,47 +5,47 @@ const PostsModels = mongoose.model(
     {
         name : {
             type: String,
-            required: true,
+            required: false,
         },
         logo : {
             type: String,
-            required: true,
+            required: false,
         },
         prestation : {
             type: String,
-            required: true,
+            required: false,
         },
         price : {
             type: Number,
-            required: true,
+            required: false,
         },
         facture : {
             type: String,
-            required: true,
+            required: false,
         },
         secteur : {
             type: String,
-            required: true,
+            required: false,
         },
         date : {
             type: String,
-            required: true,
+            required: false,
         },
         contact : {
             type: String,
-            required: true,
+            required: false,
         },
         mail : {
             type: String,
-            required: true,
+            required: false,
         },
         phone : {
             type: String,
-            required: true,
+            required: false,
         },
         details : {
             type: String,
-            required: true,
+            required: false,
         },
 
     },
