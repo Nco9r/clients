@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
     });
 })
 
-router.patch('/:id', (req, res) => {
+router.put('/:id', (req, res) => {
     if (!ObjectId.isValid(req.params.id))
         return res.status(400).send('Id inconnu' + req.params.id)
 
@@ -66,8 +66,7 @@ router.patch('/:id', (req, res) => {
 
     PostsModels.findByIdAndUpdate(
         req.params.id,
-        { $set: updateRecord},
-        { new: true },
+        updateRecord,
         (err, docs) => {
             if (!err) res.send(docs);
             else console.log('update erreur' + err)
