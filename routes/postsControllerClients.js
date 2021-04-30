@@ -50,19 +50,7 @@ router.patch('/:id', (req, res) => {
     if (!ObjectId.isValid(req.params.id))
         return res.status(400).send('Id inconnu' + req.params.id)
 
-    const updateRecord = {
-            name: req.body.name,
-            logo : req.body.logo,
-            prestation : req.body.prestation,
-            price : req.body.price,
-            facture: req.body.facture,
-            date : req.body.date,
-            secteur : req.body.secteur,
-            contact : req.body.contact,
-            mail : req.body.mail,
-            phone : req.body.phone,
-            details : req.body.details
-    };
+    const updateRecord = req.body
 
     PostsModels.findByIdAndUpdate(
         req.params.id,
