@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
     });
 })
 
-router.put('/:id', (req, res) => {
+router.patch('/:id', (req, res) => {
     if (!ObjectId.isValid(req.params.id))
         return res.status(400).send('Id inconnu' + req.params.id)
 
