@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const PostsModels = mongoose.model(
-    "rouxnicolas",
+    "myFirstDatabase",
     {
         name : {
             type: String,
