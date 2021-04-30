@@ -9,11 +9,6 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/', (req, res) => {
-    PostsModels.findOne((err, docs) => {
-        if(!err) res.send(docs)
-    })
-})
 
 router.get('/:id', (req, res) => {
     if (!ObjectId.isValid(req.params.id))
@@ -56,16 +51,23 @@ router.put('/:id', (req, res) => {
         return res.status(400).send('Id inconnu' + req.params.id)
 
     const updateRecord = {
-        name: req.body.name,
-        logo : req.body.logo,
-        prestation : req.body.prestation,
-        price : req.body.price,
+            name: req.body.name,
+            logo : req.body.logo,
+            prestation : req.body.prestation,
+            price : req.body.price,
+            facture: req.body.facture,
+            date : req.body.date,
+            secteur : req.body.secteur,
+            contact : req.body.contact,
+            mail : req.body.mail,
+            phone : req.body.phone,
+            details : req.body.details,
     };
 
     PostsModels.findByIdAndUpdate(
         req.params.id,
-        {$set: {...updateRecord}},
-        {new: true},
+        { $set: updateRecord},
+        { new: true },
         (err, docs) => {
             if (!err) res.send(docs);
             else console.log('update erreur' + err)
