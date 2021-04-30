@@ -23,6 +23,14 @@ const PostsModels = mongoose.model(
             type: String,
             required: false,
         },
+        accompte : {
+            type: Number,
+            required: false,
+        },
+        reste : {
+            type: Number,
+            required: false,
+        },
         secteur : {
             type: String,
             required: false,
