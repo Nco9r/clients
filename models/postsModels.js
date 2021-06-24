@@ -1,39 +1,44 @@
 const mongoose = require('mongoose');
 
 const PostsModels = mongoose.model(
-    "rouxnicolas",
+    "clients",
     {
         name : {
             type: String,
-            required: false,
+            required: true,
         },
-        logo : {
-            type: String,
-            required: false,
+        logo:
+        {
+            type: Object,
+            require: true,
         },
         prestation : {
             type: String,
-            required: false,
+            required: true,
+
         },
         price : {
             type: Number,
-            required: false,
+            required: true,
+
         },
         facture : {
             type: String,
-            required: false,
+            required: true,
+
         },
         accompte : {
             type: Number,
-            required: false,
+            required: true,
         },
         reste : {
             type: Number,
-            required: false,
+            required: true,
         },
         secteur : {
             type: String,
-            required: false,
+            required: true,
+
         },
         date : {
             type: String,
@@ -41,23 +46,26 @@ const PostsModels = mongoose.model(
         },
         contact : {
             type: String,
-            required: false,
+            required: true,
+
         },
         mail : {
             type: String,
-            required: false,
+            required: true,
+
         },
         phone : {
             type: String,
-            required: false,
+            required: true,
+
         },
         details : {
             type: String,
-            required: false,
+            required: true,
         },
 
     },
-    "clients" || "prospects",
+    "clients",
 )
 
 
